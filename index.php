@@ -21,7 +21,7 @@ $usuarios = buscarUsuario($conexao);
     
     <h1>Testando PHP com Banco SQL</h1>
     
-    <h2>Usuarios</h2>
+    <h2>Usuarios cadastrados</h2>
 
     <?php foreach($usuarios as $usuario) { ?>
 
