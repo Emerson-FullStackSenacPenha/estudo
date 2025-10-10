@@ -30,7 +30,8 @@ $usuarios = buscarUsuario($conexao);
             <td><?=$usuario['nome']?></td>
             <td>
                 <a href="editar.php?id=<?=$usuario['id']?>">Editar</a>
-                <a href="excluir.php?id=<?=$usuario['id']?>">Excluir</a>
+                <button id="excluir" >Excluir</button>
+                <!-- <a class="excluir" href="excluir.php?id= <//?=$usuario['id']?>"> Excluir</a> -->
             </td>
 
         </tr>
@@ -38,9 +39,19 @@ $usuarios = buscarUsuario($conexao);
 
     <?php } ?>
  
+    <dialog id="janelaExcluir" >
+
+        <div>
+            <input type="password" name="nova_senha" placeholder="Atualizar senha" required>
+        </div>
+
+        <button type="submit" name="atualizar">Atualizar</button>
+
+    </dialog>
+
     <br>
 
     <a href="cadastrar.php">Adicionar novo usuario</a>
-    
+    <script src="confirmar-excluir.js" ></script>
 </body>
 </html>
